@@ -1,0 +1,23 @@
+<div class="form-group mt-2 w-75 mx-auto flex-container center-container">
+    <form [formGroup]="form" (ngSubmit)="sendTodo()">
+        <div class="row">
+            <div class="col-100">
+                <h1 className="text-center">{{title}}</h1>
+                <label>Id usuario</label>
+                <input class="form-control" type="number" formControlName="user">
+                <label>Titulo</label>
+                <input class="form-control" type="text" formControlName="title">
+                <label>Completado</label>
+                <select class="form-control" formControlName="completado">
+                    <option value="true">Completado</option>
+                    <option value="false">No completado</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100 flex j-end">
+                <button [disabled]="form.invalid" class="btn btn-secondary mt-2" type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>

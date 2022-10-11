@@ -1,0 +1,18 @@
+<div class="form-group mt-2 w-75 mx-auto flex-container center-container">
+    <form [formGroup]="form" (ngSubmit)="login()">
+        <div class="row">
+            <div class="col-100">
+                <h1 className="text-center">Login</h1>
+                <label>Usuario</label>
+                <input class="form-control" type="text" formControlName="username">
+                <label>Contraseña</label>
+                <input class="form-control" type="text" formControlName="password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100 flex j-end">
+                <button [disabled]="form.invalid" class="btn btn-secondary mt-2" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+</div>

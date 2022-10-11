@@ -1,0 +1,13 @@
+.flex3 { 
+    width: 33%;
+    display: flex; 
+    justify-content: space-between; 
+} 
+
+.w-15{
+    width: 15%;
+}
+
+.w-55{
+    width: 55%;
+}
